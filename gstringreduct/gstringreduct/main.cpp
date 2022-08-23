@@ -29,8 +29,8 @@ void initbehavior(){
                 loc++;
             bdat[++behavcnt].id=buf.substr(0,loc);
         }
-        if(buf.substr(0,37)=="<InfoFlags index=\"Hidden\" value=\"1\"/>")
-            bdat[behavcnt].is_hidden=true;
+        /*if(buf.substr(0,37)=="<InfoFlags index=\"Hidden\" value=\"1\"/>")
+            bdat[behavcnt].is_hidden=true;*/
     }
     in.close();
     return;
@@ -50,7 +50,7 @@ bool chkbehavior(string x){
             return bdat[i].is_hidden;
         }
     }
-    return true;
+    return false;
 }
 void reduct(string fname){
     ifstream in;
